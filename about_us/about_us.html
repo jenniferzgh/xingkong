@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="about_us.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.7/jquery.fullPage.css" />
+	<title>fullpage</title>		
+
+</head>
+<body>
+    <div id="fullpage">
+		<div class="section section1">
+			<div id="head">               
+               	 <nav id="title">
+                    <li ><a href="#" class="select">首页</a></li>
+                    <li ><a href="about_us.html" >关于星空</a></li>
+                    <li ><a href="structure.html">组织架构</a></li>
+                    <li ><a href="../ability/ability.html">各方向技能</a></li>
+                    <li ><a href="activity.html">日常活动</a></li>
+                    <li ><a href="join_us.html">加入我们</a></li>
+                </nav>                
+                <div id="logo"></div>              
+            </div>
+            <div id="home_lable">
+            	<div id="home_lable_radish">Welcome!</div>
+            	<div id="home_lable_triangle"></div>
+            	<span >你想体验不一样的炫酷的大学生活吗？
+            	你想在大学结识一群志同道合的朋友吗？
+            	你想在大学就接触互联网行业的工作吗？
+            	星空学生创新中心是你最好的选择
+            	小星空，大梦想，加入我们，快速成长!</span>
+
+            </div>
+		</div>
+		<div class="section section2">
+			<div id="mainbody">
+               	    <div id="container">
+                        <div id="list" style="left:-840px;">
+                            <img src="images/5.jpg" alt=""/>
+                            <img src="images/1.png" alt=""/>
+                            <img src="images/2.gif" alt=""/>
+                            <img src="images/3.png" alt=""/>
+                            <img src="images/4.gif" alt=""/>
+                            <img src="images/5.jpg" alt=""/>
+                            <img src="images/1.png" alt=""/>
+                        </div>
+                        <div id="buttons">
+                          <span index="1"></span>
+                          <span index="2"></span>
+                          <span index="3"></span>
+                          <span index="4"></span>
+                          <span index="5"></span>
+    
+                        </div>
+ 
+                        <a href="javascript:;" class="arrow" id="pref">&lt;</a>
+                        <a href="javascript:;" class="arrow" id="next" >&gt;</a>
+   
+                    </div>
+
+                    
+               </div>
+		</div>
+		<div class="section">第三页</div>
+		<div class="section">第四页</div>
+	</div>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.7/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	    	 $("#fullpage").fullpage(
+	    	 {
+                
+	    	 })
+	     })
+	</script>	
+</body>
+</html>

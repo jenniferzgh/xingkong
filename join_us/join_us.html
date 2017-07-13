@@ -1,0 +1,578 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf8"/>
+<link rel="stylesheet" type="Text/css" href="style.css">
+
+
+<title>关于星空</title>
+<script type="text/javascript" >
+function getLength(str){
+  return str.replace(/[^x00-xff]/g,"x").length;
+}
+window.onload=function(){
+	 var block1_background=document.getElementById('block1_background');
+   var list=document.getElementById('list');
+   var buttons=document.getElementById('buttons').getElementsByTagName('span');
+   var your_name=document.getElementById('your_name');
+   var self_specialty=document.getElementById('self_specialty');
+   var name=document.getElementById('form1_text1_prompt_name_message');
+   var specialy=document.getElementById('form1_text1_prompt_specialty_message');
+   var sex_prompt=document.getElementById('form1_text1_prompt_sex_message');
+   var grade_prompt=document.getElementById('form1_text1_prompt_grade_message');
+   var prompt_phone=document.getElementById('form1_text1_prompt_phone_message');
+   var center_prompt=document.getElementById('form2_text2_prompt_center_message');
+   var allocate_prompt=document.getElementById('form2_text2_prompt_allocate_message');
+   var other_prompt=document.getElementById('form2_text2_prompt_other_message');
+   var hobby_prompt=document.getElementById('form3_prompt_hobby_message');
+   var sex=document.getElementById('sex');
+   var select_grade=document.getElementById('select_grade');
+   var select_phone=document.getElementsByTagName('select_phone');
+   var birthday=document.getElementById('birthday');
+   var option=document.getElementsByTagName('option');
+   var center=document.getElementsByTagName('center');
+   var allocate=document.getElementsByTagName('allocate');
+   var other=document.getElementsByTagName('other');
+   var hobby=document.getElementById('hobby');
+   var step=document.getElementsByTagName('step')
+   var step1=document.getElementById('step1');
+   var step2=document.getElementById('step1');
+   var step3=document.getElementById('step1');
+
+     
+   var name_length=0;
+   var index=1;
+   var timer;
+
+      function showButton()
+     {
+       var step=document.getElementsByTagName('step');
+      for(var i=0;i < buttons.length;i++)   <!--让按钮前面的按钮灭-->
+        {if(buttons[i].className=='on')
+           {buttons[i].className=''
+           break;}
+        }
+
+      buttons[index-1].className='on'; 
+      
+
+           <!--让按钮亮起来 方法是给按钮增加一个class-->
+    }
+
+
+
+
+
+    function animate(offset)
+     {
+      var newleft=parseInt(list.style.left)+offset ;  
+      var time=400;
+      var interval=10;
+      var speed=offset/(time/interval);
+      
+
+      
+      function  go(){
+       if((speed<0&& parseInt(list.style.left)>newleft)||(speed>0&& parseInt(list.style.left)<newleft))
+        {list.style.left=parseInt( list.style.left)+speed+'px';
+         setTimeout(go,interval);
+        }
+      else{
+      list.style.left=newleft +'px';
+<!--无限滚动 方法是归位-->
+      if(newleft<-2400){list.style.left=-600+'px';}
+      if(newleft>-600){list.style.left=-2400+'px';}
+       }
+    }
+    go();    <!--如果不在这里调用，函数将不会被执行-->
+ }
+
+
+
+
+
+
+ 
+ <!--按钮点击事件-->
+   for(var i=0;i < buttons.length;i++) {
+    buttons[i].onclick=function()
+    {
+        if(this.className=='on')
+           {return;}
+    <!--优化代码，如果当前按钮是亮的，依旧点击，则直接返回，不执行下面的函数-->
+        var myindex=parseInt(this.getAttribute('index'))
+        var offset=-600*parseInt(myindex-index);
+        animate(offset);
+        index=myindex;  <!--为的是给showButton这个函数一个新的index值-->
+        showButton();
+
+      
+          
+       
+      }
+  } 
+
+
+
+
+
+  your_name.onfocus=function(){
+    
+    name.innerHTML='填写中...';
+  }
+
+
+
+  your_name.onkeyup=function(){
+    name.innerHTML='填写中...';
+  }
+
+
+
+
+  your_name.onblur=function(){
+    var name_length=getLength(your_name.value);
+    var re=/[^\u4e00-\u9fa5]/g;
+    if(re.test(your_name.value)){
+       name.innerHTML='非法字符';
+    }
+    else if(name_length==0){
+      name.innerHTML='不能为空';
+    }
+    else{
+      name.innerHTML='<i class="ok"></i>OK!'
+    }
+  
+  }
+  
+
+
+
+self_specialty.onfocus=function(){
+    
+    specialy.innerHTML='填写中...';
+  }
+
+  self_specialty.onblur=function(){
+    specialty_length=getLength(self_specialty.value);
+    var re=/[^\u4e00-\u9fa5]/g;
+    if(re.test(self_specialty.value)){
+       specialy.innerHTML='非法字符';
+    }
+    else if(specialty_length==0){
+      specialy.innerHTML='不能为空';
+    }
+    
+    else{
+      specialy.innerHTML='<i class="ok"></i>OK!'
+    }
+  }
+
+
+
+
+
+select_grade.onclick=function(){
+  grade_prompt.innerHTML='填写中...';
+}
+
+
+
+
+select_grade.onmouseleave=function(){
+  if(this.options[this.selectedIndex].text=="")
+    {grade_prompt.innerHTML='未填写'}
+  else
+  {grade_prompt.innerHTML='<i class="ok"></i>OK!'}
+  
+}
+
+
+
+
+select_sex.onclick=function(){
+  sex_prompt.innerHTML='填写中...';
+}
+
+
+
+select_sex.onmouseleave=function(){
+  if(this.options[this.selectedIndex].text=="")
+    {sex_prompt.innerHTML='未填写'}
+  else
+  {sex_prompt.innerHTML='<i class="ok"></i>OK!'}
+ 
+}
+
+
+
+
+birthday.onclick=function(){
+  form1_text1_prompt_birthday_message.innerHTML='填写中...';
+}
+
+
+
+
+birthday.onmouseleave=function(){
+  var select=document.getElementById("birthday").getElementsByTagName("select");
+  for(i=0;i<select.length;i++){
+    select[i];
+    if(select[i].options[select[i].selectedIndex].text=="")
+    {form1_text1_prompt_birthday_message.innerHTML='未填写'
+     }
+     else if(select[0].options[select[0].selectedIndex].text!=""&&select[1].options[select[1].selectedIndex].text!=""
+   &&select[1].options[select[1].selectedIndex].text!=""){
+      form1_text1_prompt_birthday_message.innerHTML='<i class="ok"></i>OK!'
+     }
+}
+
+}
+
+sele_phone.onfocus=function(){   
+    prompt_phone.innerHTML='填写中...';
+  }
+
+
+
+sele_phone.onkeyup=function(){
+    prompt_phone.innerHTML='填写中...';
+  }
+
+
+
+sele_phone.onblur=function(){
+    var phone_length=getLength(sele_phone.value);
+    var re=/[^\d]/g;
+    if(re.test(sele_phone.value)){
+       prompt_phone.innerHTML='请填数字';
+    }
+    else if(phone_length==0){
+      prompt_phone.innerHTML='不能为空';
+    }
+    else if(phone_length==6||phone_length==11){
+      prompt_phone.innerHTML='<i class="ok"></i>OK!';
+    }
+    else{
+      prompt_phone.innerHTML='空号'
+    }
+  }
+
+select_center.onclick=function(){
+  center_prompt.innerHTML='填写中...';
+}
+
+
+select_center.onmouseleave=function(){
+  if(this.options[this.selectedIndex].text=="")
+    {center_prompt.innerHTML='未填写'}
+  else
+  {center_prompt.innerHTML='<i class="ok"></i>OK!'} 
+}
+
+
+select_allocate.onclick=function(){
+  allocate_prompt.innerHTML='填写中...';
+}
+
+
+select_allocate.onmouseleave=function(){
+  if(this.options[this.selectedIndex].text=="")
+    {allocate_prompt.innerHTML='未填写'}
+  else
+  {allocate_prompt.innerHTML='<i class="ok"></i>OK!'} 
+}
+
+
+select_other.onclick=function(){
+  other_prompt.innerHTML='填写中...';
+}
+
+
+select_other.onmouseleave=function(){
+  if(this.options[this.selectedIndex].text=="")
+    {other_prompt.innerHTML='未填写'}
+  else
+  {other_prompt.innerHTML='<i class="ok"></i>OK!'} 
+}
+
+
+hobby.onkeyup=function(){
+  hobby_length=getLength(hobby.value);//获取输入框的值
+           hobby_prompt.innerHTML= '已输入'+hobby_length+'个字';
+           
+}
+
+
+
+document.getElementById("submit").onclick=function(){
+        var request=new XMLHttpRequest();
+        request.open("POST","create.php");
+        var data=
+        "name="+document.getElementById("your_name").value  //&表示空格
+        +"&sex="+document.getElementById("select_sex").value
+        +"&year="+document.getElementById("selectBirthday").value
+        +"&grade="+document.getElementById("select_grade").value
+        +"&month="+document.getElementById("selectBirthday_month").value
+        +"&day="+document.getElementById("selectBirthday_day").value
+        +"&specialty="+document.getElementById("self_specialty").value
+        +"&phone="+document.getElementById("sele_phone").value
+        +"&center="+document.getElementById("select_center").value
+        +"&allocate="+document.getElementById("select_allocate").value
+        +"&other="+document.getElementById("select_other").value
+        +"&hobby="+document.getElementById("hobby").value;
+                request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+           
+        request.send(data);
+        request.onreadystatechange=function(){
+          if(request.readyState===4){
+            if(request.status===200){
+            
+             
+                            document.getElementById("saveResult").innerHTML=request.responseText;
+                          
+            }
+            else{alert("发生错误："+request.status)}
+          }
+        }
+      }
+
+}
+  
+</script>
+</head>
+<body>
+
+<div id="background">
+    <div id="head">               
+               	 <nav id="title">
+                    <li ><a href="../xingkong/xingkong.html" >首页</a></li>
+                    <li ><a href="../ability/ability.html">各方向技能</a></li>
+                    <li ><a href="activity.html">日常活动</a></li>
+                    <li ><a href="join_us.html">加入我们</a></li>
+                </nav>                
+                <div id="logo"></div>
+    </div>
+    <div id="block1">
+        <h1>2017星空学生创新中心新生报名表</h1>
+        <img src="img/logo.png">
+        <div id="first_span">
+          <span>如果你有意愿加入我们，请详细填写报名表，</br>
+        让我们更加了解你，不久会有专人联系你，</br>
+        加入我们，快速成长</br>
+        </span>
+        </div>
+        
+        <div id="progress_bar">
+            <div id="step1" class="step" index='1'>step1</div>
+            <div id="step2" class="step" index='2'>step2</div>
+            <div id="step3" class="step" index='3'>step3</div>
+        </div>
+        <div id="block1_background">
+        <div id="form">
+            <div id="list" style="left: -600px;">
+                <div id="form4" class="text">4</div>
+        	    <div id="form1" class="text">
+        	    	<div id="form1_text1">
+        	    		<h2>个人信息</h2>
+        	    		<span>请填写好你的个人信息，填写真实姓名，本人最常用电话（便于您接收面试通知），
+        	    		出生日期请按2017.05.25的格式填写,填写专业时无需填写学院</span>
+        	    		<h3>本页所需填写的项有：</h3>
+        	    		<h4 id="name_h4">姓名</h4>
+                  <div id="form1_text1_prompt_name_message" class="form1_text1_prompt_message">未填写</div>
+        	    		<h4 id="sex_h4">性别</h4>
+                  <div id="form1_text1_prompt_sex_message" class="form1_text1_prompt_message">未填写</div>
+        	    		<h4 id="grade_h4">年级</h4>
+                  <div id="form1_text1_prompt_grade_message" class="form1_text1_prompt_message">未填写</div>
+        	    		<h4 id="birthday_h4">出生年月日</h4>
+                  <div id="form1_text1_prompt_birthday_message" class="form1_text1_prompt_message">未填写</div>
+        	    		<h4 id="specialty_h4">专业</h4>
+                  <div id="form1_text1_prompt_specialty_message" class="form1_text1_prompt_message">未填写</div>
+        	    		<h4 id="phone_h4">电话</h4>
+                  <div id="form1_text1_prompt_phone_message" class="form1_text1_prompt_message">未填写</div>
+        	    	   
+        	    	</div>
+        	    	<div id="form1_text2">
+        	    		      <div id="name">
+                            <span >姓名：</span>
+                            <input value="" type="text" id="your_name" placeholder="在此输入名字"> 
+                        </div>
+                        <div id="sex">
+                            <span >性别:</span>
+                                <select class="select" id="select_sex"name="select_sex">
+                               <option ></option>
+			                         <option >女</option>
+			                         <option >男</option>
+		                         </select>
+                        </div>
+                        <div id="grade">
+                            <span >年级:</span>
+
+                                <select class="select" id="select_grade" name="select_grade">
+                                <option ></option>
+                               <option >2017级</option>
+                               <option >2016级</option>
+                               <option >2015级</option>
+                               <option >2014级</option>
+                             </select>   
+                        </div>
+                        <div id="birthday">
+                            <span >出生年月日:</span>
+                              <select id="selectBirthday">
+                              <option ></option>
+                               <option >1999年</option>
+                               <option >1998年</option>
+                               <option >1997年</option>
+                               <option >1996年</option>
+                               <option >1995年</option>
+                               <option >1994年</option>
+                               <option >1993年</option>
+                             </select>
+                             <select id="selectBirthday_month">
+                               <option ></option>
+                               <option >01月</option>
+                               <option >02月</option>
+                               <option >03月</option>
+                               <option >04月</option>
+                               <option >05月</option>
+                               <option >06月</option>
+                               <option >07月</option>
+                               <option >08月</option>
+                               <option >09月</option>
+                               <option >10月</option>
+                               <option >11月</option>
+                               <option >12月</option>
+                             </select>
+                             <select id="selectBirthday_day">
+                               <option ></option>
+                               <option >01日</option>
+                               <option >02日</option>
+                               <option >03日</option>
+                               <option >04日</option>
+                               <option >05日</option>
+                               <option >06日</option>
+                               <option >07日</option>
+                               <option >08日</option>
+                               <option >09日</option>
+                               <option >10日</option>
+                               <option >11日</option>
+                               <option >12日</option>
+                               <option >13日</option>
+                               <option >14日</option>
+                               <option >15日</option>
+                               <option >16日</option>
+                               <option >17日</option>
+                               <option >18日</option>
+                               <option >19日</option>
+                               <option >20日</option>
+                               <option >21日</option>
+                               <option >22日</option>
+                               <option >23日</option>
+                               <option >24日</option>
+                               <option >25日</option>
+                               <option >26日</option>
+                               <option >27日</option>
+                               <option >28日</option>
+                               <option >29日</option>
+                               <option >30日</option>
+                               <option >31日</option>
+                               
+                             </select>
+                        </div>
+                        <div id="specialty">
+                            <span >专业:</span>
+                            <input value="" type="text" id="self_specialty" placeholder="在此输入专业" name="self_specialty"> 
+                        </div>
+                        <div id="phone">
+                            <span >电话:</span>
+                            <input value="" type="text" id="sele_phone" placeholder="在此输入电话" name="sele_phone"> 
+                        </div>
+
+                        
+        	    	</div>
+        	    </div>
+        	  
+        	    <div id="form2" class="text">
+                  <div id="form2_text1"></div>
+                  <div id="form2_text2">
+                      <h1>志愿填报</h1>
+                      <div id="center">
+                            <span >所选方向:</span>
+                               <select class="form2_text_select" id="select_center">
+                               <option ></option>
+                               <option >技术研发中心网页方向</option>
+                               <option >技术研发中心安卓方向</option>
+                               <option >技术研发中心ios方向</option>
+                               <option >运营策划中心公关策划方向</option>
+                               <option >运营策划中心产品方向</option>
+                               <option >运营策划中心新媒体方向</option>
+                               <option >文化传媒中心中心视频方向</option>
+                               <option >文化传媒中心中心策划方向</option>
+                               <option >文化传媒中心中心摄影方向</option>
+                             </select>
+                        </div>
+                        <div id="allocate">
+                            <span >是否服从调配:</span>
+                               <select class="form2_text_select" id="select_allocate">
+                               <option ></option>
+                               <option >是</option>
+                               <option >否</option>
+                              
+                             </select>
+                        </div>
+                        <div id="other">
+                            <span >是否有报名其他校级组织:</span>
+                               <select class="form2_text_select" id="select_other">
+                               <option ></option>
+                               <option >是</option>
+                               <option >否</option>
+                              
+                             </select>
+                        </div>
+                        <h3>本页所需填写的项有：</h3>                     
+                        <h4>所选方向:</h4>
+                        <div id="form2_text2_prompt_center_message" class="form2_text2_prompt_message">未填写</div>
+                        <h4>是否服从调配:</h4>
+                        <div id="form2_text2_prompt_allocate_message" class="form2_text2_prompt_message">未填写</div>
+                        <h4>是否有报名其他校级组织:</h4>
+                        <div id="form2_text2_prompt_other_message" class="form2_text2_prompt_message">未填写</div>
+                        
+
+                  </div>
+
+              </div>
+        	    <div id="form3" class="text">
+                   <span>个人爱好及特长:</span>
+                    <textarea id="hobby" zrap="virtual" name="hobby"placeholder="在此输入文字"></textarea>
+                    <div id="form3_prompt_hobby_message" >未填写</div>
+                    <p id="saveResult">保存结果</p>
+                    <input type="submit" id="submit" placeholder="提交">
+              </div>
+        	    <div id="form4" class="text">4
+                   <div id="form4_text1"></div> 
+              </div>
+        	    <div id="form1" class="text">1</div>
+        	</div>    
+        </div>
+            
+        </div>          
+        <div id="buttons">
+            <span index="1"id="circle1">1</span>
+            <span index="2"id="circle2">2</span>
+            <span index="3"id="circle3">3</span>
+            <span index="4"id="circle4">4</span>    
+        </div>
+        <!--
+        <div id="four_circular_father">
+        	<div id="circle1" class="circle">1</div>
+        	<div id="circle2" class="circle">2</div>
+        	<div id="circle3" class="circle">3</div>
+        	<div id="circle4" class="circle">4</div>
+        </div>
+        --> 
+    </div>            
+               
+   
+</div>
+</body>
+</html>

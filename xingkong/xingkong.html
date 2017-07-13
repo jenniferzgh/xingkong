@@ -1,0 +1,414 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="x-ua-compatible" content="IE=edge" >
+<meta http-equiv="Content-type" content="text/html; charset=utf8"/>
+<link rel="stylesheet" type="Text/css" href="style.css">
+
+
+<title>首页</title>
+<script style="text/javascript" rel="stylesheet">
+ window.onload=function(){
+     var container=document.getElementById('container');
+     var list=document.getElementById('list');
+     var rolling_text3=document.getElementById('rolling_text3');
+     var rolling_text2=document.getElementById('rolling_text2');
+     var rolling_text1=document.getElementById('rolling_text1');
+     var pref=document.getElementById('pref');
+     var next=document.getElementById('next');
+     var block4=document.getElementById('block4');
+     var list2=document.getElementById('list2');
+     var management1=document.getElementById('management1');
+     var management2=document.getElementById('management2');
+     var management3=document.getElementById('management3');
+     var management4=document.getElementById('management4');
+     var pref2=document.getElementById('pref2');
+     var next2=document.getElementById('next2');
+
+     var index=1;
+  management4
+
+    
+ <!--切换  点击左右箭头时图片更换显示 方法是改变left的值-->
+  function animate(offset)
+  {
+      var newleft=parseInt(list.style.left)+offset ;  
+      var time=400;
+      var interval=10;
+      var speed=offset/(time/interval);
+      
+
+      
+      function  go(){
+          if((speed<0&& parseInt(list.style.left)>newleft)||(speed>0&& parseInt(list.style.left)<newleft))
+              {
+                   list.style.left=parseInt( list.style.left)+speed+'px';
+                   setTimeout(go,interval);
+              }
+          else{
+                  list.style.left=newleft +'px';
+                  <!--无限滚动 方法是归位-->
+                  if(newleft<-3000){list.style.left=-1000+'px';}
+                  if(newleft>-1000){list.style.left=-3000+'px';}
+             }
+      }
+
+
+
+       go();    <!--如果不在这里调用，函数将不会被执行-->
+ }
+     
+    <!--点击事件时触发事件-->
+     next.onclick=function () {
+      if(index==3){index=1;}
+       else{ index += 1;}
+      
+      animate(-1000);
+     }
+
+
+     pref.onclick=function () { 
+       if(index==1){index=3;}
+       else{ index -= 1;}
+      animate(1000);}
+    
+
+
+
+
+     function animate2(offset2)
+  {
+      var newleft=parseInt(list2.style.left)+offset2 ;  
+      var time=400;
+      var interval=10;
+      var speed=offset2/(time/interval);
+      
+
+      
+      function  go(){
+          if((speed<0&& parseInt(list2.style.left)>newleft)||(speed>0&& parseInt(list2.style.left)<newleft))
+              {
+                   list2.style.left=parseInt( list2.style.left)+speed+'px';
+                   setTimeout(go,interval);
+              }
+          else{
+                  list2.style.left=newleft +'px';
+                  <!--无限滚动 方法是归位-->
+                  if(newleft<-2400){list2.style.left=-600+'px';}
+                  if(newleft>-600){list2.style.left=-2400+'px';}
+             }
+      }
+
+
+
+       go();    <!--如果不在这里调用，函数将不会被执行-->
+ }
+  
+ <!--点击事件时触发事件-->
+     next2.onclick=function () {
+      if(index==3){index=1;}
+       else{ index += 1;}
+      
+      animate2(-600);
+     }
+
+
+     pref2.onclick=function () { 
+       if(index==1){index=3;}
+       else{ index -= 1;}
+      animate2(600);}
+ 
+
+}  
+</script>
+
+</head>
+<body>
+<div id="header">
+    <div id="head">               
+        <nav id="title">
+            <li ><a href="#" class="select">首页</a></li>
+           
+            <li ><a href="../ability/ability.html">各方向技能</a></li>
+            <li ><a href="activity.html">日常活动</a></li>
+            <li ><a href="../join_us/join_us.html">加入我们</a></li>
+        </nav>              
+        <div id="logo"></div>
+    </div>
+<div id="rolling">
+<div id="container">
+  <div id="list" style="left:-1000px;">
+      <div id="rolling_text3" class="rolling_text"></div>
+      <div id="rolling_text1" class="rolling_text">
+          <h1>We Are Xingkong Student innovation center</h1>
+          <span>星空学生创新中心，华南理工大学广州学院校级组织，我们担负着“心怀梦想，锐意创新</br>打造一流网络服务”的艰巨使命，秉承“团结，拼搏，创新”的组织理念</span>
+          <div id="structure_name">
+              <div id="join"><a href="http://www.xingkong.us">加入星空</a></div>
+              <div id="xingkong"><a href="http://www.xingkong.us">进入官网</a></div>          
+              <div id="tec">技术研发中心</div>
+              <div id="cul">文化传媒中心</div>
+              <div id="ope">运营策划中心</div>
+          </div> 
+      </div>
+      <div id="rolling_text2" class="rolling_text"></div>
+      <div id="rolling_text3" class="rolling_text"></div>
+      <div id="rolling_text1" class="rolling_text">1</div>    
+  </div>
+  
+ 
+
+   
+</div>
+  <a href="javascript:;" class="arrow" id="pref">&lt;</a>
+  <a href="javascript:;" class="arrow" id="next" >&gt;</a>
+</div>
+
+
+</div>          
+<div id="mainbody">
+      <div id="about_us">
+           <div id="summery1">
+               <h1>About Me</h1>
+               <span>星空学生创新中心是华南理工大学广州学院第一个以网站为工作平台的校级</br>学生组织，以“小星空，大梦想，加入我们，快速成长”为组织口号，</br>秉承“团结，创新，拼搏”的组织理念，一直全心全意为师生</br>服务一路不断精益求精，突破自身的精神</br>亦不断鞭策星空上下愈战愈勇</span>
+           </div>
+           <div id="summery2">
+             <h2>What We Do?</h2>
+             <span>运营星空网，为师生提供优质资源，以星空微信公众号，星空官方微博作为主要宣传渠道，不断研发更优质的APP，与校内各优秀校级组织密切合作，协助他们为全校师生提供更优质的服务</span>
+           </div>
+           <div id="summery3">
+             <h2>What We Do?</h2>
+             <span>不断培养优秀的互联网人才，对外输出，通过培训及员工的自主学习，创造出更优质的作品，不断提高员工素质</span>
+           </div>
+      </div>
+      <div id="organization_structure">
+          <div id="mainbody_photo1"></div>
+          <div id="organization_structure_text">
+              <h1>各中心简介.</h1>
+              <div id="structure1" class="structure">
+              <h2>技术研发中心</h2>
+              <span>下分安卓，ios，网页，三个方向。安卓主要负责安卓手机应用的开发和维护，ios主要针对苹果手机的应用开发与维护，网页分为前端和后端，共同开发及维护网页的运行</span></div>
+              <div id="structure2" class="structure">
+                <h2>文化传媒中心</h2>
+              <span>下分为平面设计，视频，及摄影三个方向，平面设计主要负责星空海报的设计，体现星空高端的设计水平；视频方向主要负责星空宣传影片的制作及后期处理；摄影方向主要负责向公众号提供摄影图及培养新人摄影触觉，整体提高星空平面水平</span>
+              </div>
+              <div id="structure3" class="structure"> <h2>运营策划中心</h2>
+              <span>下分为公关策划，星产品及新媒体三个方向。公关策划主要管理星空的内部行政事务，形象管理等方面；星产品主要负责星空公众平台及微博的更新，协助星空对外推广</span></div>  
+          </div>  
+      </div>
+      <div id="our_project">
+          <h1>我们的项目</h1>
+          <div id="project1" class="project">
+              <div id="project1_img" class="project_img">
+                <img src="images/project1.PNG">
+              </div>
+              <h2>APP系列</h2>
+               <span></span>
+          </div>
+          <div id="project2" class="project">
+              <div id="project2_img" class="project_img">
+                  <img src="images/project2.PNG">
+              </div>
+              <h2>运营系列</h2>
+              <span>微信公众号，官方微博，星空官网</span>
+          </div>
+          <div id="project3" class="project">
+              <div id="project3_img" class="project_img">
+                 <img src="images/project3_2.PNG">
+              </div>
+              <h2>对外合作系列</h2>
+              <span>星直播，唱响新声，快乐班级等</span>
+          </div>
+          <div id="project4" class="project">
+              <div id="project4_img" class="project_img">
+                 <img src="images/project4.PNG">
+              </div>
+              <h2>星空街访</h2>
+          </div>
+          <div id="project5" class="project">
+              <div id="project5_img" class="project_img">
+                 <img src="images/project5.PNG">
+              </div>
+              <h2>星名片app</h2>
+          </div>
+          <div id="project6" class="project">
+               <div id="project6_img" class="project_img">
+                  <img src="images/project6.PNG">
+               </div>
+              <h2>摄影及设计</h2>
+          </div>  
+      </div>
+      <div id="block4">
+          <h1>管理层</h1>
+          <div id="management">
+              <div id="list2" style="left:-600px;">
+                  <div id="management4" class="rolling_box"></div> 
+                  <div id="management1" class="rolling_box">
+                      <div id="paple1" class="six_small_block">
+                          <div class="six_circle" id="circle1"></div>
+                          <h1 clas="name">梁忠智</h1>
+                          <h2 class="job">文化传媒副总监</h2>
+                      </div>
+                      <div id="paple2" class="six_small_block">
+                          <div class="six_circle" id="circle2"></div>
+                          <div class="main_people">
+                          <h1 clas="name">HugeTerry</h1>
+                          <span>Motto:'Stay hungry,stay foolish'</br>
+                          He leads us to progress</br>
+                          He is CEO</span>
+                          </div>
+                      </div>
+                      <div id="paple3" class="six_small_block">
+                          <div class="six_circle" id="circle3"></div>
+                          <h1 clas="name">麦耀生</h1>
+                          <h2 class="job">文化传媒副总监</h2>
+                      </div>
+                      <div id="paple4" class="six_small_block">
+                           <div class="six_circle" id="circle4"></div>
+                          <h1 clas="name">梁名捷</h1>
+                          <h2 class="job">文化传媒副总监</h2>
+                      </div>
+                      <div id="paple5" class="six_small_block">
+                           <div class="six_circle" id="circle5"></div>
+                          <h1 clas="name">邵泳珊</h1>
+                          <h2 class="job">运营策划副总监</h2>
+                      </div>
+                      <div id="paple6" class="six_small_block">
+                           <div class="six_circle" id="circle6"></div>
+                          <h1 clas="name">倪日强</h1>
+                          <h2 class="job">技术研发副总监</h2>
+                      </div>                      
+                  </div>
+                  <div id="management2" class="rolling_box">
+                      <div id="paple7" class="six_small_block">
+                           <div class="six_circle" id="circle7"></div>
+                          <h1 clas="name">黄韬</h1>
+                          <h2 class="job">文化传媒总监</h2>
+                      </div>
+                      <div id="paple8" class="six_small_block">
+                           <div class="six_circle" id="circle8"></div>
+                           <div class="main_people">
+                          <h1 clas="name">BadMan</h1>
+                          <span>Motto:'Stay hungry,stay foolish'</br>
+                          He leads </br>
+                          He is CDO</span>
+                          </div>
+                          
+                      </div> 
+                      <div id="paple9" class="six_small_block">
+                           <div class="six_circle" id="circle9"></div>
+                           <h1 clas="name">曾悠悠</h1>
+                          <h2 class="job">文化传媒副总监</h2>
+                      </div>
+                      <div id="paple10" class="six_small_block">
+                           <div class="six_circle" id="circle10"></div>
+                          <h1 clas="name">董懿萱</h1>
+                          <h2 class="job">文化传媒副总监</h2>
+                      </div>
+                      <div id="paple11" class="six_small_block">
+                           <div class="six_circle" id="circle11"></div>
+                          <h1 clas="name">吴柏宇</h1>
+                          <h2 class="job">文化传媒副总监</h2>
+                      </div>
+                      <div id="paple12" class="six_small_block">
+                           <div class="six_circle" id="circle12"></div>
+                          <h1 clas="name">巫欣</h1>
+                          <h2 class="job">文化传媒副总监</h2>
+                      </div>                    
+                  </div>
+                  <div id="management3" class="rolling_box">
+                      <div id="paple13" class="six_small_block">
+                           <div class="six_circle" id="circle13"></div>
+                          <h1 clas="name">丁银瑶</h1>
+                          <h2 class="job">运营策划总监</h2>
+                      </div>
+                      <div id="paple14" class="six_small_block">
+                           <div class="six_circle" id="circle14"></div>
+                           <div class="main_people">
+                          <h1 clas="name">HugeTerry</h1>
+                          <span>Motto:'Stay hungry,stay foolish'</br>
+                          He leads us to progress</br>
+                          He is COO</span>
+                          </div>
+                          
+                      </div>
+                      <div id="paple15" class="six_small_block">
+                           <div class="six_circle" id="circle15"></div>
+                          <h1 clas="name">陈乐诗</h1>
+                          <h2 class="job">运营策划副总监</h2>
+                      </div>
+                      <div id="paple16" class="six_small_block">
+                           <div class="six_circle" id="circle16"></div>
+                          <h1 clas="name">黄丽纯</h1>
+                          <h2 class="job">运营策划副总监</h2>
+                      </div>
+                      <div id="paple17" class="six_small_block">
+                           <div class="six_circle" id="circle17"></div>
+                          <h1 clas="name">林宇婷</h1>
+                          <h2 class="job">运营策划副总监</h2>
+                      </div>
+                      <div id="paple18" class="six_small_block">
+                           <div class="six_circle" id="circle18"></div>
+                          <h1 clas="name">李彤舒</h1>
+                          <h2 class="job">运营策划副总监</h2>
+                      </div>                    
+                  </div>
+                  <div id="management4" class="rolling_box">
+                      <div id="paple19" class="six_small_block">
+                           <div class="six_circle" id="circle19"></div>
+                          <h1 clas="name">吴永达</h1>
+                          <h2 class="job">技术研发总监</h2>
+                      </div>
+                      <div id="paple20" class="six_small_block">
+                           <div class="six_circle" id="circle20"></div>
+                           <div class="main_people">
+                          <h1 clas="name">宿疯</h1>
+                          <span>Motto:'Stay hungry,stay foolish'</br>
+                          He leads us to progress</br>
+                          He is CTO</span>
+                          </div>
+                         
+                      </div>
+                      <div id="paple21" class="six_small_block">
+                         <div class="six_circle" id="circle21"></div>
+                          <h1 clas="name">林睿</h1>
+                          <h2 class="job">技术研发副总监</h2>
+                      </div>
+                      <div id="paple22" class="six_small_block">
+                         <div class="six_circle" id="circle22"></div>
+                          <h1 clas="name">黄培</h1>
+                          <h2 class="job">技术研发副总监</h2>
+                      </div>
+                      <div id="paple23" class="six_small_block">
+                         <div class="six_circle" id="circle23"></div>
+                          <h1 clas="name">张富远</h1>
+                          <h2 class="job">技术研发副总监</h2>
+                      </div>
+                      <div id="paple24" class="six_small_block">
+                         <div class="six_circle" id="circle24"></div>
+                          <h1 clas="name">倪日强</h1>
+                          <h2 class="job">技术研发副总监</h2>
+                      </div>                    
+                  </div>
+                  <div id="management1" class="rolling_box"></div>      
+              </div>  
+          </div>
+      <a href="javascript:;" class="arrow2" id="pref2">&lt;</a>
+      <a href="javascript:;" class="arrow2" id="next2" >&gt;</a>  
+      </div>
+      <div id="block5">
+        <h1>组织架构</h1>
+        <h1>CEO(首席执行官)</h1>
+        <h3>COO(首席运营官)</h3>
+        <h3>CDO(首席设计官)</h3>
+        <h3>CTO(首席技术官)</h3>
+        <h4>运营策划中心</h4>
+        <h4>文化传媒中心</h4>
+        <h4>技术研发中心</h4>
+
+
+      </div>
+</div>        
+
+
+</body>
+</html>

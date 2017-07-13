@@ -1,0 +1,830 @@
+*{text-align: none;text-decoration: none;
+	list-style: none;
+}
+body{
+margin:0px;
+padding:0px;
+font-size: 14px;
+color: #ffffff;
+
+}
+a{color: #ffffff;
+font-family: "微软雅黑"；
+}
+.join{
+	width: 80px;
+	height:22px;	
+	border: 1px solid #ffffff;	
+	font-size: 12px;
+	line-height: 22px;
+	text-align: center;
+	color:#ffffff;
+	opacity: 0.7;
+	cursor: pointer;
+
+}
+h1,h2,h3,h4,h5{
+	color:  #ffffff;
+}
+h1{
+	display: block;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+margin-top: -20px;
+	font-family: "Andalus";
+	font-weight: normal;
+	font-size: 23px;
+	
+}
+h2{display: block;
+	width: 200px;
+	height: 30px;
+	text-align: center;
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 25px;
+	line-height: 30px;
+	
+}
+h3{display: block;
+	width: 200px;
+	height: 30px;
+	text-align: center;
+
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 10px;
+	line-height: 30px;
+	
+}
+h4{display: block;
+	width: 200px;
+	height: 30px;
+	text-align: center;
+
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 13px;
+	line-height: 30px;
+	color:  #40c8bf;
+
+}
+#background{
+	width: 100%;
+	height: 3063px;
+	background-color: #88d1f1;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+
+}
+.first_floor{
+	background-color: #238acc;
+}
+#title
+{
+width:625px;
+height:78px;
+position:absolute;
+top:0px;
+left:330px;
+
+}
+#head
+{
+width:100%;
+height:78px;    
+position:absolute;
+top:0px;
+left:0px;
+
+background-color: rgba(255,255,255,0.8);
+
+
+}
+/*导航栏*/
+nav{
+height: 100%;
+width: 100%;
+float: left;
+font-size: 18px;
+color:#ffffff;
+}
+nav>li{
+float: left;
+width: 25%;
+height: 100%;
+line-height: 78px;
+text-align: center;
+cursor: pointer;
+text-align: none;text-decoration: none;
+}
+.select{color:#40c8bf;}
+#logo{
+	width: 98px;
+	height: 78px;
+	position: absolute;
+	top: 0px;
+	left: 120px;
+	
+	background: url("img/logo.png") no-repeat center;
+	background-size:94%;
+
+
+}
+#title a{text-decoration: none;
+ font-size: 16px;
+ font-style: "微软雅黑";
+color:#747474;
+}
+#title a:hover{color:#40c8bf;font-size: 18px;}
+
+#block1{
+	width: 947px;
+	height: 758px;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 138px;
+	}
+#block2{
+	width: 947px;
+	height: 676px;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 2px;
+	
+}
+#block3{
+	width: 947px;
+	height: 583px;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 2px;
+	
+}
+#block4{
+	width: 947px;
+	height: 492px;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 2px;
+	}
+
+#block1_first_floor{
+	width: 947px;
+	height: 476px;
+	position: relative;
+	margin: 0px auto;
+	margin-top: 16px;
+
+}
+#block1_vertical_bar{
+	width: 300px;
+	height: 30px;
+	position: absolute;
+	top: 270px;
+	right: -90px;
+	
+transform:rotate(90deg);	
+
+}
+#block1_vertical_bar span{
+	display: inline;
+	width:190px;
+	height: 30px;
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 16px;
+	color: #fff;
+	text-align: right;
+	
+
+
+}
+.wertical_line{
+	width: 80px;
+	height: 15px;
+	border-bottom: 1px solid #ffffff;
+	position: absolute;
+	top: 0px;
+	left: 20px;
+}
+
+#block1_image1{
+	width: 510px;
+	height: 456px;
+	position: absolute;
+	top:0px;
+	left: 333px;
+	background: #f2f2f2 url("img/technology1.jpg") no-repeat center;
+	background-size:135%;
+}
+#block1_image2{
+	width: 284px;
+	height: 191px;
+	position: absolute;
+	top:365px;
+	left: 33px;	
+	background: #f2f2f2 url("img/technology2.jpg") no-repeat left;
+	background-size:100%;
+}
+#block1_image3{
+	width: 218px;
+	height:286px ;
+	position: absolute;
+	top:470px;
+	left:332px;
+	background: #f2f2f2 url("img/technology3.jpg") no-repeat left;
+	background-size:175%;
+}
+#text1{
+	width: 200px;
+	height: 220px;
+	position: absolute;
+	top: 70px;
+	left: 80px;
+	
+}
+
+
+#text1 a{
+	color: #ffffff;
+	font-family: "Andalus";
+	font-weight: normal;
+	
+
+}
+#text1 h1,h2,h3,h4{
+	color: #ffffff;
+}
+#text1_join{
+	border: 1px solid #ffffff;
+}
+
+
+#text1_join{margin: 0 auto;
+	margin-top:10px; }
+
+#text2{
+	width: 220px;
+	height: 110px;
+	position: absolute;
+	left: 80px;
+	bottom: 70px;
+	
+
+}
+#text2_join{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+#text2 h1{
+	display: block;
+	width: 200px;
+	height: 22px;
+	margin: 0px;
+	font-family: "Andalus";
+	font-weight: normal;
+	font-size: 22px;
+	
+	float: right;
+	text-align: right;
+
+}
+#text2 span{
+	display: block;
+	width: 220px;
+	height: 36px;
+	position: absolute;
+	line-height: 18px;
+	top: 35px;
+	right: 0px;
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 13px;
+	
+	text-align: right;
+
+}
+
+#text3{
+	width: 230px;
+	height: 140px;
+	position: absolute;
+	right: 130px;
+	bottom: 70px;
+	
+
+
+}
+#text3_join{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+#text3 h1{
+	display: block;
+	width: 200px;
+	height: 22px;
+	margin: 0px;
+	position: absolute;top: 0px;
+	left: 0px;
+	font-family: "Andalus";
+	font-weight: normal;
+	font-size: 22px;
+	
+	float: right;
+	text-align: left;
+
+}
+#text3 span{
+
+	display: block;
+	width: 220px;
+	height: 80px;
+	position: absolute;
+
+	top: 35px;
+	left: 0px;
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 13px;
+	
+	text-align: left;
+
+}
+#block2_first_floor{
+	width: 475px;
+	height: 385px;
+	position: absolute;
+	right: 0px;
+	top: 111px;
+	
+}
+#block2_vertical_bar{
+	width: 300px;
+	height: 30px;
+	position: absolute;
+	top: 170px;
+	right: 220px;
+	transform:rotate(90deg); 
+	
+	
+
+}
+#block2_vertical_bar span{
+	display: inline;
+	width:190px;
+	height: 30px;
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 16px;
+	color: #fff;
+	text-align: right;
+	
+
+
+}
+#block2_img1{
+	width: 505px;
+	height: 276px;
+	position: absolute;
+	left: 32px;
+	top: 172px;
+	
+	background: #f2f2f2 url("img/operations1.jpg") no-repeat center;
+	background-size:90%;
+
+}
+#block2_img2{
+	width: 286px;
+	height: 276px;
+	position: absolute;
+	right:46px;
+	top:243px;
+	
+	background: #f2f2f2 url("img/operations2.jpg") no-repeat center;
+	background-size:150%;
+}
+#block2_text1{
+	width: 295px;
+	height: 121px;
+	position: absolute;
+	left: 107px;
+	top: 465px;
+	
+}
+#block2_text1 h1{
+	display: block;
+	width: 200px;
+	height: 22px;
+	margin: 0px;
+	font-family: "Andalus";
+	font-weight: normal;
+	font-size: 22px;
+	
+	float: left;
+	text-align: left;
+	
+
+}
+#block2_text1 span{
+	display: block;
+	width: 290px;
+	height: 85px;
+	position: absolute;
+	line-height: 18px;
+	top: 35px;
+	left: 0px;
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 12px;
+	
+	text-align: left;
+
+
+}
+#block2_join{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+#block2_text2{
+	width: 182px;
+	height: 65px;
+	position: absolute;
+	left:619px;
+	top:541px;
+	
+}
+#block2_text2 span{
+	display: block;
+	width: 180px;
+	height: 42px;
+	position: absolute;
+	line-height: 18px;
+	top: 0px;
+	left: 0px;
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 15px;
+	
+	text-align: left;
+	
+
+}
+#block3_first_floor{
+width:543px;
+	height:432px;
+	position: absolute;
+	left: 0px;
+	top:81px;
+	
+}
+#block3_vertical_bar{
+	width: 300px;
+	height: 30px;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+	transform:rotate(90deg); 
+	
+	
+
+}
+#block3_vertical_bar span{
+	display: inline;
+	width:190px;
+	height: 30px;
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 16px;
+	color: #fff;
+	text-align: right;
+	
+
+
+}
+#block3_img1{
+width: 437px;
+	height: 369px;
+	position: absolute;
+	left: 468px;
+	top: 0px;
+	background: #f2f2f2 url("img/cultural1.jpg") no-repeat center;
+	background-size:100%;
+}
+#block3_text1{
+	width: 298px;
+	height: 184px;
+	position: absolute;
+	right:85px;
+	bottom: 0px;
+	
+}
+#block3_text1 h1{
+	display: block;
+	width: 200px;
+	height: 22px;
+	margin: 0px;
+	position: absolute;top: 0px;
+	left: 0px;
+	font-family: "Andalus";
+	font-weight: normal;
+	font-size: 20px;
+	
+	float: right;
+	text-align: left;
+
+}
+#block3_text1 span{
+
+	display: block;
+	width: 300px;
+	height: 150px;
+	position: absolute;
+
+	top: 35px;
+	left: 0px;
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 13px;
+	
+	text-align: left;
+
+}
+#block3_join{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+#photografy span{
+	display: block;
+	width: 100px;
+	height: 50px;
+	position: absolute;
+
+	bottom:50px;
+	left: 40px;
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 20px;
+	color: #fff;
+	text-align: left;
+
+}
+.six_small_block{
+	height: 128px;
+	width: 128px;
+
+	
+}
+#six_small_block1{
+	position: absolute;
+	top: 82px;
+	left: 43px;
+	background: #f2f2f2 url("img/cultural2.jpg") no-repeat center;
+	background-size:100%;
+
+	
+}
+
+#six_small_block2{
+	position: absolute;
+	top: 82px;
+	left: 186px;
+	background: #f2f2f2 url("img/cultural5.jpg") no-repeat center;
+	background-size:100%;
+}
+
+#six_small_block3{
+	position: absolute;
+	top: 82px;
+	left: 327px;
+	
+}
+
+#six_small_block4{
+	position: absolute;
+	bottom: 83px;
+	left: 43px;
+	background: #010101 url("img/logo.png") no-repeat center;
+	background-size:50%;
+    opacity: 0.9;
+}
+
+#six_small_block5{
+	position: absolute;
+	bottom: 83px;
+	left: 186px;
+	background: #f2f2f2 url("img/cultural3.jpg") no-repeat center;
+	background-size:100%;
+}
+
+#six_small_block6{
+	position: absolute;
+	bottom: 83px;
+	left: 327px;
+	background: #f2f2f2 url("img/cultural4.jpg") no-repeat center;
+	background-size:100%;
+}
+#designer1{
+	width: 128px;
+	height: 25px;
+	position:absolute;
+	top: 50px;
+	left: 43px;
+	font-family: "Andalus";
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+	
+
+}
+#designer2{
+	width: 128px;
+	height: 25px;
+	position:absolute;
+	top: 50px;
+	left: 186px;
+	font-family: "Andalus";
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+	
+
+}
+#designer3{
+	width: 128px;
+	height: 25px;
+	position:absolute;
+	top: 350px;
+	left: 186px;
+	font-family: "Andalus";
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+	
+
+}
+#designer4{
+	width: 128px;
+	height: 25px;
+	position:absolute;
+	top: 350px;
+	left: 327px;
+	font-family: "Andalus";
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+	
+
+}
+#block4_first_floor{
+	width: 360px;
+	height: 288px;
+	position: absolute;
+	top: 96px;
+	left: 0px;
+
+}
+#block4_vertical_bar{
+	width: 300px;
+	height: 30px;
+	position: absolute;
+	top: 80px;
+	right: -100px;
+	transform:rotate(90deg); 
+	
+	
+
+}
+#block4_vertical_bar span{
+	display: inline;
+	width:190px;
+	height: 30px;
+	position:absolute;
+	top: 0px;
+	right: 40px;
+	font-weight: normal;
+	font-family: "Andalus";
+	font-size: 16px;
+	color: #fff;
+	text-align: right;
+	
+
+
+}
+#big_block1{
+	width: 218px;
+	height: 298px;
+	position: absolute;
+	top: 0px;
+	left: 54px;
+
+background: #f2f2f2 url("img/media1.jpg") no-repeat center;
+	background-size:100%;
+}
+.four_small_block{
+	width: 128px;
+	height: 128px;
+	
+
+}
+
+#four_small_block1{
+	position: absolute;
+	top: 167px;
+	left:378px ;
+	background: #f2f2f2 url("img/media2.jpg") no-repeat center;
+	background-size:100%;
+}
+#four_small_block2{
+	position: absolute;
+	top: 167px;
+	left:520px; 
+	background: #f2f2f2 url("img/media3.jpg") no-repeat center;
+	background-size:100%;
+}
+#four_small_block3{
+	position: absolute;
+	top: 167px;
+	left:660px; 
+	background: #f2f2f2 url("img/media4.jpg") no-repeat center;
+	background-size:100%;
+}
+#four_small_block4{
+	position: absolute;
+	top: 167px;
+	left:799px ;
+	background: #f2f2f2 url("img/media5.jpg") no-repeat center;
+	background-size:100%;
+}
+#designer5{
+	width: 128px;
+	height: 25px;
+	position:absolute;
+	top: 317px;
+	left: 378px;
+	font-family: "Andalus";
+	font-size: 15px;	
+	text-align: center;
+	
+}
+#designer6{
+	width: 128px;
+	height: 25px;
+	position:absolute;
+	top: 317px;
+	left: 520px;
+	font-family: "Andalus";
+	font-size: 15px;	
+	text-align: center;
+	
+}
+#designer7{
+	width: 128px;
+	height: 25px;
+	position:absolute;
+	top: 317px;
+	left: 660px;
+	font-family: "Andalus";
+	font-size: 15px;	
+	text-align: center;
+	
+
+}
+#designer8{
+	width: 128px;
+	height: 25px;
+	position:absolute;
+	top: 317px;
+	left: 799px;
+	font-family: "Andalus";
+	font-size: 15px;
+	text-align: center;
+	
+
+}
+#footer{
+	width: 96%;
+	height: 300px;
+	
+	margin: 0px auto;
+	margin-top: 80px;
+
+
+}
+#footer{min-width: 1200px;}
